@@ -1,3 +1,17 @@
-<h1>
-  {{title}}
-</h1>
+<div class="app">
+	<div class="app-bg-cover">
+	</div>
+	<div class="app-header">
+		<app-header [w]="w" [h]="h"></app-header>
+	</div>
+<!-- 	<header>
+		<nav>
+			<a [routerLink]="['/home']">Home</a>
+			<a [routerLink]="['/game']">Game</a>
+			<a [routerLink]="['/gallery']">Gallery</a>
+		</nav>
+	</header> -->
+	<div class="main-container">
+		<router-outlet></router-outlet>
+	</div>
+</div>

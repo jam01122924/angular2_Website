@@ -7,6 +7,7 @@ const map: any = {
 
 /** User packages configuration. */
 const packages: any = {
+  'angular2-fontawesome': { defaultExtension: 'js' },
 };
 
 ////////////////////////////////////////////////////////////////////////////////////////////////
@@ -25,10 +26,18 @@ const barrels: string[] = [
 
   // Thirdparty barrels.
   'rxjs',
-
+  'vendor/ng2-bootstrap',
+  'angular2-fontawesome',
+  
   // App specific barrels.
   'app',
   'app/shared',
+  'app/ui/home',
+  'app/components/header',
+  'app/components/header/menu-item',
+  'app/ui/work',
+  'app/components/selfie',
+  'app/ui/games',
   /** @cli-barrel */
 ];
 
@@ -42,10 +51,15 @@ declare var System: any;
 
 // Apply the CLI SystemJS configuration.
 System.config({
+  paths: {
+    'angular2-fontawesome': 'node_modules/angular2-fontawesome/lib/components',
+  },
   map: {
     '@angular': 'vendor/@angular',
     'rxjs': 'vendor/rxjs',
-    'main': 'main.js'
+    'main': 'main.js',
+    'moment': 'vendor/moment/moment.js',
+    'ng2-bootstrap': 'vendor/ng2-bootstrap',
   },
   packages: cliSystemConfigPackages
 });

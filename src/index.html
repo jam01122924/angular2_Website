@@ -7,7 +7,7 @@
   {{content-for 'head'}}
   <link rel="icon" type="image/x-icon" href="favicon.ico">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
   <!-- Service worker support is disabled by default.
        Install the worker script and uncomment to enable.
        Only enable service workers in production.
@@ -20,9 +20,19 @@
   </script>
   -->
 </head>
-<body>
-  <website-app>Loading...</website-app>
-
+<body style="
+    height: 100%;
+    width: 100%;
+    overflow: hidden;">
+  <div style="
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll;
+    padding-right: 17px;">
+   <website-app>
+      Loading...
+    </website-app>
+  </div>
   <script src="vendor/es6-shim/es6-shim.js"></script>
   <script src="vendor/reflect-metadata/Reflect.js"></script>
   <script src="vendor/systemjs/dist/system.src.js"></script>

@@ -1,0 +1,9 @@
+<div class="home-container">
+	<img src="imgs/selfie/paper_edge.png" width="100%" *ngIf="w>720">
+<!-- 	<div class="home-section-container" *ngFor="#bg of bgImg; #i = index" [ngStyle]="{'background-image': 'url(imgs/selfie/' + bg + '.jpg)'}">
+		<div class="home-section-content">
+		</div>
+	</div> -->
+	<app-selfie [w]="w" [h]="h" class="app-selfie"></app-selfie>
+	<img src="imgs/selfie/paper_edge_down.png" width="100%" *ngIf="w>720">
+</div>
